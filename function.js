@@ -107,3 +107,100 @@
 
 // =====================================================================================================================
 
+
+// function CartPrice(val1, val2, ...num1){
+//     return num1
+// }
+
+// console.log(CartPrice(200,500,600));
+
+
+// =====================================================================================================================
+
+// const user = {
+//     name : "himanshu sen",
+//     pass : 7410
+
+// }
+
+// const user2 = {
+//     name: "raj",
+//     pass: 1234
+// };
+
+
+
+// function objectuser(anyobject){
+
+//     console.log(`hello i am ${anyobject.name}. this is my pass ${anyobject.pass}`)
+// }
+
+// objectuser(user)
+
+// objectuser(user2);
+
+// objectuser({
+//     name : "tera name",
+//     pass : 7410
+
+// })
+
+// =====================================================================================================================
+
+// const array = [0,1,2,3,4]
+
+// function arrayuse(getarray){
+
+//     return getarray[2]
+// }
+
+// console.log(arrayuse(array));
+// console.log(arrayuse([0,1,2,3,4]));
+
+
+
+// =====================================================================================================================
+
+// Step 1: Array of users
+// const users = [
+//     {
+//         name: "himanshu sen",
+//         pass: 7410,
+//         email: "himanshu@example.com",
+//         phone: "9876543210",
+//         role: "student"
+//     },
+//     {
+//         name: "raj verma",
+//         pass: 1234,
+//         email: "raj@example.com",
+//         phone: "9123456780",
+//         role: "teacher"
+//     },
+//     {
+//         name: "anita yadav",
+//         pass: 5678,
+//         email: "anita@example.com",
+//         phone: "9998887776",
+//         role: "admin"
+//     }
+// ];
+
+// // Step 2: Function to print user info
+// function objectuser(anyobject) {
+//     console.log(`🪪 User Profile`);
+//     console.log(`Name     : ${anyobject.name}`);
+//     console.log(`Password : ${anyobject.pass}`);
+//     console.log(`Email    : ${anyobject.email}`);
+//     console.log(`Phone    : ${anyobject.phone}`);
+//     console.log(`Role     : ${anyobject.role}`);
+//     console.log('-------------------------');
+// }
+
+// // Step 3: Loop through all users
+// users.forEach(objectuser) // This will call your function for each user
+
+
+// =====================================================================================================================
+
+
