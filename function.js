@@ -1,192 +1,201 @@
-// Simple function declaration and usage example
+// Function returning and logging name
+/*
+function myname() {
+    const name = 'himanshu sen'
+    return name, console.log(name);
+}
 
-// function myname() {
-//     const name = 'himanshu sen'
-//     return name,console.log(name); // Note: return and console.log together - only one works properly
-// }
-
-// console.log(myname()); // Logs undefined because console.log runs, but return is ignored
-// myname()
-
-//=====================================================================================================================
-
-// Correct way to return and log value from function
-
-// function myname() {
-//     const name = 'himanshu sen';
-//     console.log(name);  // Log inside the function
-//     return name;        // Return value for external use
-// }
-
-// console.log(myname()); // Logs the returned value
-// myname();              // Calls function again, logs inside it
+console.log(myname());
+myname()
+*/
 
 //=====================================================================================================================
 
-// Function to add two numbers, typecasted to ensure addition works with string numbers
+// Proper function with return and log inside
+/*
+function myname() {
+    const name = 'himanshu sen';
+    console.log(name);  // Log inside function
+    return name;        // Return name
+}
 
-// function addnum(num1,num2){
-//     console.log(Number(num1)+Number(num2))
-// }
-
-// Test cases with different input types
-// addnum(5,6)
-// addnum(5,'6')
-// addnum('5',6)
-// addnum('5','6')
-// addnum(5,'a')     // NaN output due to 'a'
-// addnum('5','a')   // NaN output due to 'a'
-
-// =====================================================================================================================
-
-// Function to perform all arithmetic operations
-
-// function para(a,b){
-//     console.log(`addition is ${Number(a)+Number(b)}`);
-//     console.log(`subtraction is ${Number(a)-Number(b)}`);
-//     console.log(`multiply is ${Number(a)*Number(b)}`);
-//     console.log(`divide is ${Number(a)/Number(b)}`);
-// }
-
-// para(6,5)
-// console.log("=======================================");
-// para(6,null)       // null is treated as 0
-// console.log("=======================================");
-// para(6,undefined)  // undefined leads to NaN in operations
+console.log(myname()); // Logs returned value and internally log value 
+myname();              // Logs internally
+*/
 
 //=====================================================================================================================
 
-// Same para function but simplified to just return result
+// Addition function with string and number handling
+/*
+function addnum(num1, num2){
+    console.log(Number(num1) + Number(num2))
+}
 
-// function para(a,b){
-//     let result = a + b 
-//     return result         // Only returns addition result
-// }
-
-// const result = para(4,5)  // Stores returned result
-// para(4,5)                 // Called again but output not used
-// console.log(result)       // Prints stored result
-
-// =====================================================================================================================
-
-// Return + log inside and outside function
-
-// function para(a, b) {
-//     let result = a + b;
-//     console.log("Inside function:", result); // Logs inside
-//     return result;
-// }
-
-// const result = para(4, 5);  // Calls function and stores result
-// console.log("Outside function:", result); // Logs outside
-
-// console.log(para(1,2)) // Inline call and log
+addnum(5,6)
+addnum(5,'6')
+addnum('5',6)
+addnum('5','6')
+addnum(5,'a')
+addnum('5','a')
+*/
 
 // =====================================================================================================================
 
-// Basic function returning result, used multiple ways
+// Arithmetic operations using Number conversion
+/*
+function para(a,b){
+    console.log(`addition is ${Number(a)+Number(b)}`);
+    console.log(`subtraction is ${Number(a)-Number(b)}`);
+    console.log(`multiply is ${Number(a)*Number(b)}`);
+    console.log(`divide is ${Number(a)/Number(b)}`);
+    console.log(`reminder is ${Number(a)%Number(b)}`);
+}
 
-// function addnum(num1,num2){
-//     return num1+num2;
-// }
+para(6,5)
+console.log("=======================================");
+para(6,null)
+console.log("=======================================");
+para(6,undefined)
+*/
 
-// addnum(4,5)                      // No output, result unused
-// const result = addnum(4,5)      // Store result
-// console.log("result : " , result ) 
-// console.log("result : " , addnum(4,5) ) // Direct inline output
+//=====================================================================================================================
 
-// =====================================================================================================================
+// Return-only version of para function
+/*
+function para(a,b){
+    let result1 = a + b 
+    console.log("result_1 : ",result1); // comment if you want internal log
+    return result1
+}
 
-// Function using rest parameters - collects remaining args into array
-
-// function CartPrice(val1, val2, ...num1){
-//     return num1 // Returns array of values after first two
-// }
-
-// console.log(CartPrice(200,500,600)); // Outputs: [600]
-
-// =====================================================================================================================
-
-// Object definition and use in function
-
-// const user = {
-//     name : "himanshu sen",
-//     pass : 7410
-// }
-
-// const user2 = {
-//     name: "raj",
-//     pass: 1234
-// };
-
-// Function to log object properties
-
-// function objectuser(anyobject){
-//     console.log(`hello i am ${anyobject.name}. this is my pass ${anyobject.pass}`)
-// }
-
-// objectuser(user)      // Using predefined object
-// objectuser(user2);    // Another object
-// objectuser({          // Inline object
-//     name : "tera name",
-//     pass : 7410
-// })
+const result = para(4,5); // if log inside the fn is comment then no prblem but if not then every time we call fn log internal was execute
+para(4,4)
+console.log("result : " , result)
+*/
 
 // =====================================================================================================================
 
-// Function that works with arrays
+// Function returning and logging addition result
+/*
+function para(a, b) {
+    let result = a + b;
+    console.log("Inside function:", result);
+    return result;
+}
 
-// const array = [0,1,2,3,4]
+// const result = para(4, 5);
+// console.log("Outside function:", result);
+console.log(para(1,2)) // Execute value two times First, inside the function log, second 
 
-// function arrayuse(getarray){
-//     return getarray[2]    // Returns 3rd element
-// }
+*/
+// =====================================================================================================================
 
-// console.log(arrayuse(array));         // Using predefined array
-// console.log(arrayuse([0,1,2,3,4]));   // Using inline array
+// Simple function returning addition
+/*
+function addnum(num1,num2){
+    return num1+num2;
+}
+
+addnum(4,5)
+const result = addnum(4,5)
+console.log("result : " , result )
+console.log("result : " , addnum(4,5) )
+*/
 
 // =====================================================================================================================
 
-// Step 1: Array of user objects with full info
+// Function using rest parameters
+/*
+function CartPrice(val1, val2, ...num1){
+    return num1
+}
 
-// const users = [
-//     {
-//         name: "himanshu sen",
-//         pass: 7410,
-//         email: "himanshu@example.com",
-//         phone: "9876543210",
-//         role: "student"
-//     },
-//     {
-//         name: "raj verma",
-//         pass: 1234,
-//         email: "raj@example.com",
-//         phone: "9123456780",
-//         role: "teacher"
-//     },
-//     {
-//         name: "anita yadav",
-//         pass: 5678,
-//         email: "anita@example.com",
-//         phone: "9998887776",
-//         role: "admin"
-//     }
-// ];
-
-// Step 2: Function to print user profile nicely
-
-// function objectuser(anyobject) {
-//     console.log(`🪪 User Profile`);
-//     console.log(`Name     : ${anyobject.name}`);
-//     console.log(`Password : ${anyobject.pass}`);
-//     console.log(`Email    : ${anyobject.email}`);
-//     console.log(`Phone    : ${anyobject.phone}`);
-//     console.log(`Role     : ${anyobject.role}`);
-//     console.log('-------------------------');
-// }
-
-// Step 3: Loop through array and print each user
-
-// users.forEach(objectuser) // Calls objectuser for each item in array
+console.log(CartPrice(200,500,600));
+*/
 
 // =====================================================================================================================
+
+// Passing object to function and accessing its properties
+/*
+const user = {
+    name : "himanshu sen",
+    pass : 7410
+}
+
+const user2 = {
+    name: "raj",
+    pass: 1234
+};
+
+function objectuser(anyobject){
+    console.log(`hello i am ${anyobject.name}. this is my pass ${anyobject.pass}`)
+}
+
+objectuser(user)
+objectuser(user2);
+objectuser({
+    name : "tera name",
+    pass : 7410
+})
+*/
+
+// =====================================================================================================================
+
+// Accessing array elements via function
+/*
+const array = [0,1,2,3,4]
+
+function arrayuse(getarray){
+    return getarray[2]
+}
+
+console.log(arrayuse(array));
+console.log(arrayuse([0,1,2,3,4]));
+*/
+
+// =====================================================================================================================
+
+// Printing user profiles from array of objects
+/*
+const users = [
+    {
+        name: "himanshu sen",
+        pass: 7410,
+        email: "himanshu@example.com",
+        phone: "9876543210",
+        role: "student"
+    },
+    {
+        name: "raj verma",
+        pass: 1234,
+        email: "raj@example.com",
+        phone: "9123456780",
+        role: "teacher"
+    },
+    {
+        name: "anita yadav",
+        pass: 5678,
+        email: "anita@example.com",
+        phone: "9998887776",
+        role: "admin"
+    }
+];
+
+function objectuser(anyobject) {
+    console.log(`🪪 User Profile`);
+    console.log(`Name     : ${anyobject.name}`);
+    console.log(`Password : ${anyobject.pass}`);
+    console.log(`Email    : ${anyobject.email}`);
+    console.log(`Phone    : ${anyobject.phone}`);
+    console.log(`Role     : ${anyobject.role}`);
+    console.log('-------------------------');
+}
+
+users.forEach(objectuser)
+*/
+
+// =====================================================================================================================
+
+
+
+
